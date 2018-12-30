@@ -1,1 +1,6 @@
-El toaster usado no funciona con bootstrap 4.2, funciona en estos momentos con la 4.1.
+* El toaster usado no funciona con bootstrap 4.2, funciona en estos momentos con la 4.1.
+* Uso de formularios reactivos con validación
+* Conexión con el servidor https://randomuser.me para obtener usuarios y publicarlos en un tabla con paginación
+* Incluido toaster en el formulario reativo al incluir un nuevo elemento.
+* Menu usando bootstrap.
+* Uso de una clase que contiene la estructura de los datos a recibor del servidor y a publicar en la tabla.
