@@ -1,0 +1,20 @@
+<h3 class="col-md-4 mt-xl-5 ml-xl-5">{{title}}</h3>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of users| paginate: { currentPage: page,itemsPerPage: itemsPerPage, currentPage: page }; let i = index" (click)="mensaje(p)">
+            <td>{{ itemsPerPage * (page - 1) + i }}</td>
+            <td>{{ p.name.first | uppercase }}</td>
+            <td>{{ p.name.last | uppercase }}</td>
+            <td>{{ p.location.city }}</td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls screenReaderPageLabel="pagina" screenReaderCurrentLabel="Está en la pagina" previousLabel="Anterior" nextLabel="Siguiente" (pageChange)="page = $event"></pagination-controls>
